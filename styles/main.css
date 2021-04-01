@@ -27,6 +27,14 @@ a {
   font-size: 17px;
 }
 
+@media (min-width: 1440px) {
+  .header__button {
+    width: 15%;
+    font-size: 18px;
+    margin: 0 10px;
+  }
+}
+
 .button-cta-color {
   background-color: white;
   color: #ff3d54;
@@ -51,7 +59,10 @@ a {
 
 @media (min-width: 1440px) {
   .header {
-    height: 20vh;
+    background-image: -webkit-gradient(linear, left top, right top, from(#ff8f70), to(#ff3d54));
+    background-image: linear-gradient(to right, #ff8f70, #ff3d54);
+    height: 80vh;
+    padding: 20px 150px;
   }
 }
 
@@ -60,6 +71,12 @@ a {
   font-family: "Overpass", sans-serif;
   font-weight: 600;
   color: white;
+}
+
+@media (min-width: 1440px) {
+  .header__icon {
+    font-size: 32px;
+  }
 }
 
 .header .header__container {
@@ -75,6 +92,12 @@ a {
   height: 15vh;
 }
 
+@media (min-width: 1440px) {
+  .header .header__container {
+    height: 10vh;
+  }
+}
+
 .header__introduction {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -83,12 +106,12 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 80vh;
   padding: 0 25px;
   text-align: center;
@@ -99,9 +122,23 @@ a {
   z-index: 100;
 }
 
+@media (min-width: 1440px) {
+  .header__introduction {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+}
+
 .header__title {
   font-size: 34px;
   font-weight: 700;
+}
+
+@media (min-width: 1440px) {
+  .header__title {
+    font-size: 54px;
+  }
 }
 
 .header__intro {
@@ -130,6 +167,12 @@ a {
   height: 20vh;
 }
 
+@media (min-width: 1440px) {
+  .header__buttons {
+    margin-top: 30px;
+  }
+}
+
 .header__svg {
   position: absolute;
   top: -150px;
@@ -142,6 +185,12 @@ a {
 .header__image {
   pointer-events: all;
   z-index: 999;
+}
+
+@media (min-width: 1440px) {
+  .header__image {
+    display: none;
+  }
 }
 
 .nav {
@@ -337,6 +386,91 @@ a {
             transform: translateY(0);
     opacity: 1;
   }
+}
+
+.desktop-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 80%;
+  color: white;
+  font-family: "Overpass", sans-serif;
+}
+
+.desktop-nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style-type: none;
+}
+
+.desktop-nav__element {
+  padding-right: 10px;
+}
+
+.desktop-nav__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 10px;
+}
+
+.desktop-nav__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 20%;
+  list-style: none;
+}
+
+.desktop-nav__signup {
+  padding: 10px 35px;
+  margin-left: 20px;
+  color: #ff3d54;
+  border-radius: 25px;
+  background-color: white;
+  font-size: 14px;
+  font-family: "Overpass", sans-serif;
+  font-weight: 700;
 }
 
 .section {

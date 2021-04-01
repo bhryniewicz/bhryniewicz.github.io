@@ -9,6 +9,12 @@
   font-family: $overpass;
   font-weight: weight(bold);
   font-size: 17px;
+
+  @include view($desktop-size) {
+      width: 15%;
+      font-size: $fs-medium;
+      margin: 0 10px;
+  }
 }
 
 .button-cta-color {

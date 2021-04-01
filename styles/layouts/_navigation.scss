@@ -116,3 +116,45 @@
         opacity: 1;
     }
 }
+
+.desktop-nav {
+    // display: none;
+    @include flex(row,space-between);
+    width: 80%;
+    color: $clr-primary-text;
+    font-family: $overpass;
+    
+    &__list {
+        @include flex(row);
+        list-style-type: none;
+    }
+
+    &__element {
+        padding-right: 10px;
+    }
+
+    &__container {
+        @include flex(row);
+        padding: 0 10px;
+    }
+
+    &__form {
+        @include flex(row,space-around);
+        width: 20%;
+        list-style: none;
+    }
+
+    &__signup {
+        padding: 10px 35px;
+        margin-left: 20px;
+        color: $bgc-light-red-cta;
+        border-radius: 25px;
+        background-color: $clr-primary-text;
+        font-size: $fs-small;
+        font-family: $overpass;
+        font-weight: weight(bold);
+    }
+    @include view($desktop-size) {
+
+    }
+}
