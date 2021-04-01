@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+$font-weights: (
+    "light": 300,
+    "regular": 400,
+    "medium": 500,
+    "semi-bold": 600,
+    "bold": 700
+);
+
+$overpass: 'Overpass', sans-serif;
+$ubuntu: 'Ubuntu', sans-serif;
+
+//neutral
+
+$clr-primary-text: hsl(0,0%,100%);
+$clr-footer-text: hsl(240,2%,79%);
+$clr-grayish-blue-text: hsl(207,13%,34%);
+
+//backgrounds
+
+$bgc-black-blue: hsl(240,10%,16%);
+$bgc-red-cta: hsl(13,100%,72%);
+$bgc-light-red-cta: hsl(353,100%,62%);
+$bgc-gray-blue: hsl(237,17%,21%);
+$bgc-destaturated-blue: hsl(237,23%,32%);
+
+//font-sizes
+
+$fs-small: 14px;
+$fs-regular: 16px;
+$fs-medium: 18px;
+
+$fs-headings: 30px;
+
+$desktop-size: 1440px;

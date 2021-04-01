@@ -1,0 +1,79 @@
+@use '../abstracts/' as *;
+
+.header {
+  height: 100vh;
+  background-image: linear-gradient(
+    to bottom right,
+    $bgc-red-cta,
+    $bgc-light-red-cta
+  );
+  border-radius: 0 0 0 100px;
+  padding: 20px;
+  overflow: hidden;
+  z-index: -2;
+
+  @include view($desktop-size) {
+    height: 20vh;
+  }
+
+  &__icon {
+    font-size: $fs-headings;
+    font-family: $overpass;
+    font-weight: weight(semi-bold);
+    color: $clr-primary-text;
+  }
+
+  #{&}__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 15vh;
+  }
+
+  &__introduction {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    padding: 0 25px;
+    text-align: center;
+    font-family: $overpass;
+    color: $clr-primary-text;
+    transform: translateY(-40px);
+    z-index: 100;
+  }
+
+  &__title {
+    font-size: 34px;
+    font-weight: weight(bold);
+  }
+
+  &__intro {
+    padding: 0 15px;
+    font-weight: weight(light);
+    font-size: $fs-regular;
+    margin-top: 10px;
+    letter-spacing: 1px;
+  }
+
+  &__buttons {
+    @include flex(row);
+    width: 100%;
+    height: 20vh;
+  }
+
+  &__svg {
+    position: absolute;
+    top: -150px;
+    left: -200px;
+    height: 1000px;
+    width: 1000px;
+    z-index: 1;
+  }
+
+  &__image {
+      pointer-events: all;
+      z-index: 999;
+  }
+}

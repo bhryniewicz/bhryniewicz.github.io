@@ -1,0 +1,32 @@
+@use '../abstracts/' as *;
+
+.footer {
+    @include flex(column);
+    flex-basis: 1;
+    padding: 40px 0;
+    font-family: $overpass;
+    background-color: $bgc-black-blue;
+    border-radius: 0 80px 0 0;
+    color: $clr-primary-text;
+
+    &__title {
+        font-size: 40px;
+        margin-bottom: 50px;
+        padding-top: 30px;
+    }
+
+    &__name {
+        margin: 30px 0 40px;
+        font-size: $fs-medium;
+    }
+
+    &__list {
+        list-style: none;
+        text-align: center;
+    }
+
+    &__element {
+        color: $clr-footer-text;
+        font-size: $fs-small;
+    }
+}

@@ -1,0 +1,23 @@
+@use '../abstracts/' as *;
+
+.header__button {
+  width: 45%;
+  height: 50px;
+  margin: 0 7px;
+  border: none;
+  border-radius: 25px;
+  font-family: $overpass;
+  font-weight: weight(bold);
+  font-size: 17px;
+}
+
+.button-cta-color {
+  background-color: $clr-primary-text;
+  color: $bgc-light-red-cta;
+}
+
+.button-cta-transparent {
+    background-color: transparent;
+    color: $clr-primary-text;
+    border: 1px solid $clr-primary-text;
+}

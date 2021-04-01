@@ -1,0 +1,45 @@
+@use '../abstracts/' as *;
+
+.state {
+  margin-top: 300px;
+  position: relative;
+
+  &__container {
+      height: 100vh;
+      background-color: $bgc-gray-blue;
+      border-radius: 0 80px 0 80px;
+      position: relative;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+  }
+
+  &__circle {
+      position: absolute;
+      top: -250px;
+      left: -100px;
+      width: 600px;
+  }
+
+  &__image {
+      width: 100%;
+      position: absolute;
+      top: -200px;
+      left: 0;
+  }
+
+  &__descript {
+      position: absolute;
+      top: 35%;
+      padding: 30px;
+      color: $clr-primary-text;
+      font-family: $overpass;
+      text-align: center;
+  }
+
+  &__title {
+      font-size: 35px;
+      margin-bottom: 30px;
+  }
+}
+

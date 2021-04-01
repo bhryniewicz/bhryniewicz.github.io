@@ -1,0 +1,118 @@
+.nav {
+  position: fixed;
+  top: 55%;
+  left: 50%;
+  @include flex(column);
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  height: 70vh;
+  background-color: #fff;
+  z-index: 50;
+  border-radius: 5px;
+  box-shadow: -5px 18px 25px 2px rgba($bgc-black-blue, 0.6);
+  color: $bgc-destaturated-blue;
+  font-family: $overpass;
+  animation: entry 1s alternate both;
+
+  &__list {
+    width: 100%;
+    list-style-type: none;
+    @include flex(column);
+  }
+
+  &__list__items {
+    width: 300px;
+    flex-basis: 1;
+    background-color: $clr-footer-text;
+  }
+
+  &__item {
+    padding: 5px 0;
+  }
+
+  &__items {
+    animation: entryOfItems 0.5s alternate both;
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+
+  &__element {
+    @include flex(row);
+    padding: 4px 0;
+    font-weight: weight(semi-bold);
+    font-size: $fs-medium;
+  }
+
+  &__name {
+    font-weight: weight(semi-bold);
+    margin-right: 10px;
+  }
+
+  &__arrow {
+    &--animate-arrow {
+      animation: rotate 1s alternate both;
+    }
+  }
+
+  &__login {
+    width: 80%;
+    padding: 20px 0 0 0;
+    // background-color:red;
+    margin-top: 30px;
+    border-top: 1px solid $clr-footer-text;
+  }
+
+  &__signup {
+    height: 55px;
+    width: 50%;
+    background-image: linear-gradient(
+      to bottom right,
+      $bgc-red-cta,
+      $bgc-light-red-cta
+    );
+    margin-top: 20px;
+    color: $clr-primary-text;
+    border-radius: 25px;
+  }
+
+  &--noactive {
+    display: none;
+  }
+}
+
+@keyframes entry {
+  from {
+    transform: translate(-50%, -80%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(-50%, -50%);
+    opacity: 1;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes entryOfItems {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
