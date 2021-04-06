@@ -405,6 +405,15 @@ a {
   width: 80%;
   color: white;
   font-family: "Overpass", sans-serif;
+  display: none;
+}
+
+@media (min-width: 1440px) {
+  .desktop-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .desktop-nav__list {
@@ -484,6 +493,13 @@ a {
   z-index: 3;
 }
 
+@media (min-width: 1440px) {
+  .section {
+    overflow: hidden;
+    padding-bottom: 250px;
+  }
+}
+
 .section .section__container {
   -ms-flex-preferred-size: 1;
       flex-basis: 1;
@@ -530,7 +546,30 @@ a {
   text-align: center;
   font-weight: 700;
   font-size: 30px;
-  margin: 50px 0 30px 0;
+  margin: 50px 0 60px 0;
+}
+
+@media (min-width: 1440px) {
+  .section__title {
+    font-size: 45px;
+  }
+}
+
+.section__title-content {
+  text-align: center;
+  font-weight: 700;
+  font-size: 30px;
+  margin: 50px 0 60px 0;
+}
+
+@media (min-width: 1440px) {
+  .section__title-content {
+    font-size: 45px;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
 }
 
 .section__img {
@@ -538,6 +577,26 @@ a {
   -ms-grid-column: 2;
   -ms-grid-column-span: 10;
   grid-column: 2/12;
+}
+
+@media (min-width: 1440px) {
+  .section__img {
+    display: none;
+  }
+}
+
+.section__img-desktop {
+  position: absolute;
+  width: 60vw;
+  right: -16%;
+  top: 100px;
+  display: none;
+}
+
+@media (min-width: 1440px) {
+  .section__img-desktop {
+    display: block;
+  }
 }
 
 .section__paragraph {
@@ -548,10 +607,27 @@ a {
   letter-spacing: 0.7px;
 }
 
+@media (min-width: 1440px) {
+  .section__paragraph {
+    text-align: left;
+    width: 550px;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    margin: 0;
+    font-size: 14px;
+  }
+}
+
 @use '../abstracts/' as *;
 .state {
   margin-top: 300px;
   position: relative;
+}
+
+@media (min-width: 1440px) {
+  .state {
+    margin: 0 0 50px;
+  }
 }
 
 .state__container {
@@ -562,6 +638,28 @@ a {
   top: 0;
   left: 0;
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (min-width: 1440px) {
+  .state__container {
+    background-image: -webkit-gradient(linear, left top, right bottom, from(#2c2d3f), to(#3f4164));
+    background-image: linear-gradient(to right bottom, #2c2d3f, #3f4164);
+    height: 60vh;
+    overflow: hidden;
+  }
 }
 
 .state__circle {
@@ -571,11 +669,27 @@ a {
   width: 600px;
 }
 
+@media (min-width: 1440px) {
+  .state__circle {
+    width: 60%;
+    left: -150px;
+    top: -450px;
+  }
+}
+
 .state__image {
   width: 100%;
   position: absolute;
   top: -200px;
   left: 0;
+}
+
+@media (min-width: 1440px) {
+  .state__image {
+    width: 45%;
+    top: -90px;
+    left: 50px;
+  }
 }
 
 .state__descript {
@@ -585,6 +699,19 @@ a {
   color: white;
   font-family: "Overpass", sans-serif;
   text-align: center;
+}
+
+@media (min-width: 1440px) {
+  .state__descript {
+    width: 600px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    text-align: left;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    right: 100px;
+  }
 }
 
 .state__title {
@@ -616,10 +743,34 @@ a {
   color: white;
 }
 
+@media (min-width: 1440px) {
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 80px 200px 80px 0;
+  }
+}
+
 .footer__title {
   font-size: 40px;
   margin-bottom: 50px;
   padding-top: 30px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 .footer__name {
@@ -635,5 +786,11 @@ a {
 .footer__element {
   color: #c8c8cb;
   font-size: 14px;
+}
+
+@media (min-width: 1440px) {
+  .footer__element {
+    padding: 5px 0;
+  }
 }
 /*# sourceMappingURL=main.css.map */

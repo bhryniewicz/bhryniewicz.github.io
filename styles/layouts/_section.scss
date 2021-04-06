@@ -6,6 +6,11 @@
   margin-bottom: 100px;
   z-index: 3;
 
+  @include view($desktop-size) {
+    overflow: hidden;
+    padding-bottom: 250px;
+  }
+
   #{&}__container {
     flex-basis: 1;
     grid-column: 2/12;
@@ -26,12 +31,46 @@
     text-align: center;
     font-weight: weight(bold);
     font-size: 30px;
-    margin: 50px 0 30px 0;
+    margin: 50px 0 60px 0;
+
+    @include view($desktop-size) {
+      font-size: 45px;
+    }
+  }
+
+  &__title-content {
+    text-align: center;
+    font-weight: weight(bold);
+    font-size: 30px;
+    margin: 50px 0 60px 0;
+
+    @include view($desktop-size) {
+      font-size: 45px;
+      align-self: flex-start;
+      font-size: 25px;
+      margin-bottom: 30px;
+    }
   }
 
   &__img {
     width: 430px;
     grid-column: 2/12;
+
+    @include view($desktop-size) {
+      display: none;
+    }
+  }
+
+  &__img-desktop {
+    position: absolute;
+    width: 60vw;
+    right: -16%;
+    top: 100px;
+    display: none;
+
+    @include view($desktop-size) {
+      display: block;
+    }
   }
 
   &__paragraph {
@@ -40,5 +79,13 @@
     margin: 0 10px;
     font-weight: weight(light);
     letter-spacing: 0.7px;
+
+    @include view($desktop-size) {
+      text-align: left;
+      width: 550px;
+      align-self: flex-start;
+      margin: 0;
+      font-size: $fs-small;
+    }
   }
 }
